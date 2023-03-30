@@ -63,5 +63,10 @@ def remover_animal(animal_id:str):
         return {'erro': 'animal não localizado'}
 
 
+@app.delete('/animais')
+def apagar_animais():
+    banco.clear()
+    return {'msg':'animais deletados com sucesso'}
+
 
 
